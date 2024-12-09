@@ -1,0 +1,32 @@
+\hypertarget{tablecipher_8h_source}{}\doxysection{tablecipher.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <locale>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{13 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{19 \textcolor{keyword}{class }tablecipher \{}
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} st; }
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} isValidKey(\textcolor{keywordtype}{int} key,\textcolor{keywordtype}{string} s);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{bool} isPlusKey(\textcolor{keywordtype}{int} key);}
+\DoxyCodeLine{48     \textcolor{keywordtype}{string} getValidOpenText(\textcolor{keyword}{const} std::string\& s);}
+\DoxyCodeLine{49 \textcolor{keyword}{public}:}
+\DoxyCodeLine{50     tablecipher(\textcolor{keywordtype}{int} key); }
+\DoxyCodeLine{51     tablecipher() = \textcolor{keyword}{delete}; }
+\DoxyCodeLine{59     \textcolor{keywordtype}{string} encrypt(\textcolor{keywordtype}{string} text);}
+\DoxyCodeLine{68     \textcolor{keywordtype}{string} decrypt(\textcolor{keywordtype}{string} text);}
+\DoxyCodeLine{75 \textcolor{keyword}{class }cipher\_error : \textcolor{keyword}{public} std::invalid\_argument}
+\DoxyCodeLine{76 \{}
+\DoxyCodeLine{77 \textcolor{keyword}{public}:}
+\DoxyCodeLine{83     \textcolor{keyword}{explicit} cipher\_error(\textcolor{keyword}{const} std::string\& what\_arg): }
+\DoxyCodeLine{84     std::invalid\_argument(what\_arg)\{\}}
+\DoxyCodeLine{90     \textcolor{keyword}{explicit} cipher\_error(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* what\_arg): }
+\DoxyCodeLine{91     std::invalid\_argument(what\_arg)\{\}}
+\DoxyCodeLine{92 \};}
+
+\end{DoxyCode}
