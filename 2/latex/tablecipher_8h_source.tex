@@ -1,0 +1,33 @@
+\hypertarget{tablecipher_8h_source}{}\doxysection{tablecipher.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <locale>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{13 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{classtablecipher}{tablecipher}} \{}
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} \mbox{\hyperlink{classtablecipher_aebf0a7a7b49d86a082b37ad8a785d368}{st}}; }
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} \mbox{\hyperlink{classtablecipher_a1832a22e85a5302a5eef4ddc1ec6bc28}{isValidKey}}(\textcolor{keywordtype}{int} key,\textcolor{keywordtype}{string} s);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classtablecipher_a19c3ebf451ec2dce5bc070724c41b956}{isPlusKey}}(\textcolor{keywordtype}{int} key);}
+\DoxyCodeLine{48     \textcolor{keywordtype}{string} \mbox{\hyperlink{classtablecipher_ab7da385f2d3641d6ddcc8219cdc95426}{getValidOpenText}}(\textcolor{keyword}{const} std::string\& s);}
+\DoxyCodeLine{49 \textcolor{keyword}{public}:}
+\DoxyCodeLine{50     \mbox{\hyperlink{classtablecipher_a7578236b9352b9861a5bd108ca36eb0e}{tablecipher}}(\textcolor{keywordtype}{int} key); }
+\DoxyCodeLine{51     \mbox{\hyperlink{classtablecipher_a7578236b9352b9861a5bd108ca36eb0e}{tablecipher}}() = \textcolor{keyword}{delete}; }
+\DoxyCodeLine{59     \textcolor{keywordtype}{string} \mbox{\hyperlink{classtablecipher_a90c10f7d13fa3d9d05f5948f3b5a9251}{encrypt}}(\textcolor{keywordtype}{string} text);}
+\DoxyCodeLine{68     \textcolor{keywordtype}{string} \mbox{\hyperlink{classtablecipher_ab81d2a4583b5abaf07e075fa6f109bc8}{decrypt}}(\textcolor{keywordtype}{string} text);}
+\DoxyCodeLine{75  \}}
+\DoxyCodeLine{76 \textcolor{keyword}{class }cipher\_error : \textcolor{keyword}{public} std::invalid\_argument}
+\DoxyCodeLine{77 \{}
+\DoxyCodeLine{78 \textcolor{keyword}{public}:}
+\DoxyCodeLine{84     \textcolor{keyword}{explicit} cipher\_error(\textcolor{keyword}{const} std::string\& what\_arg): }
+\DoxyCodeLine{85     std::invalid\_argument(what\_arg)\{\}}
+\DoxyCodeLine{91     \textcolor{keyword}{explicit} cipher\_error(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* what\_arg): }
+\DoxyCodeLine{92     std::invalid\_argument(what\_arg)\{\}}
+\DoxyCodeLine{93 \};}
+
+\end{DoxyCode}

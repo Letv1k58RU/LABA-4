@@ -1,0 +1,32 @@
+\begin{theindex}
+
+  \item {decrypt}
+    \subitem {tablecipher}, \hyperpage{6}
+
+  \indexspace
+
+  \item {encrypt}
+    \subitem {tablecipher}, \hyperpage{6}
+
+  \indexspace
+
+  \item {getValidOpenText}
+    \subitem {tablecipher}, \hyperpage{7}
+
+  \indexspace
+
+  \item {isPlusKey}
+    \subitem {tablecipher}, \hyperpage{7}
+  \item {isValidKey}
+    \subitem {tablecipher}, \hyperpage{7}
+
+  \indexspace
+
+  \item {tablecipher}, \hyperpage{5}
+    \subitem {decrypt}, \hyperpage{6}
+    \subitem {encrypt}, \hyperpage{6}
+    \subitem {getValidOpenText}, \hyperpage{7}
+    \subitem {isPlusKey}, \hyperpage{7}
+    \subitem {isValidKey}, \hyperpage{7}
+
+\end{theindex}

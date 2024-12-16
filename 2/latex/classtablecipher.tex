@@ -1,0 +1,166 @@
+\hypertarget{classtablecipher}{}\doxysection{Класс tablecipher}
+\label{classtablecipher}\index{tablecipher@{tablecipher}}
+
+
+Шифрование методом табличной маршрутной перестановки  
+
+
+
+
+{\ttfamily \#include $<$tablecipher.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtablecipher_a40e70d74f4fcfea8b03a1625454967ab}\label{classtablecipher_a40e70d74f4fcfea8b03a1625454967ab}} 
+{\bfseries tablecipher} (int key)
+\begin{DoxyCompactList}\small\item\em конструктор \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtablecipher_a7578236b9352b9861a5bd108ca36eb0e}\label{classtablecipher_a7578236b9352b9861a5bd108ca36eb0e}} 
+{\bfseries tablecipher} ()=delete
+\begin{DoxyCompactList}\small\item\em запрект конструктора без параметров \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classtablecipher_a90c10f7d13fa3d9d05f5948f3b5a9251}{encrypt}} (string text)
+\begin{DoxyCompactList}\small\item\em Зашифровывание \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classtablecipher_ab81d2a4583b5abaf07e075fa6f109bc8}{decrypt}} (string text)
+\begin{DoxyCompactList}\small\item\em Расшифровывание \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classtablecipher_a1832a22e85a5302a5eef4ddc1ec6bc28}{is\+Valid\+Key}} (int key, string s)
+\begin{DoxyCompactList}\small\item\em Проверка валидации ключа \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtablecipher_a19c3ebf451ec2dce5bc070724c41b956}{is\+Plus\+Key}} (int key)
+\begin{DoxyCompactList}\small\item\em Проверка символов строки \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classtablecipher_ab7da385f2d3641d6ddcc8219cdc95426}{get\+Valid\+Open\+Text}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Валидация зашифрованного текста \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtablecipher_aebf0a7a7b49d86a082b37ad8a785d368}\label{classtablecipher_aebf0a7a7b49d86a082b37ad8a785d368}} 
+int {\bfseries st}
+\begin{DoxyCompactList}\small\item\em количество столбцов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Шифрование методом табличной маршрутной перестановки 
+
+Ключ устанавливается в конструкторе. Для зашифровывания и расшифровывания предназначены методы encrypt и decrypt. \begin{DoxyWarning}{Предупреждения}
+Реализация только для английского языка 
+\end{DoxyWarning}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classtablecipher_ab81d2a4583b5abaf07e075fa6f109bc8}\label{classtablecipher_ab81d2a4583b5abaf07e075fa6f109bc8}} 
+\index{tablecipher@{tablecipher}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!tablecipher@{tablecipher}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily string tablecipher\+::decrypt (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+
+
+Расшифровывание 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em text} & Шифрованный текст должен быть пустой строкой. Все пробелы убираются из текста Все не-\/буквы удаляются \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+расшифрованная строка 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em cipher\+\_\+error,если} & текст пустой \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classtablecipher_a90c10f7d13fa3d9d05f5948f3b5a9251}\label{classtablecipher_a90c10f7d13fa3d9d05f5948f3b5a9251}} 
+\index{tablecipher@{tablecipher}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!tablecipher@{tablecipher}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily string tablecipher\+::encrypt (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+
+
+Зашифровывание 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em text} & Открытый текст. Не должен быть пустой строкой. Пробелы удаляются \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Зашифрованная строка 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em cipher\+\_\+error,если} & текст пустой \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classtablecipher_ab7da385f2d3641d6ddcc8219cdc95426}\label{classtablecipher_ab7da385f2d3641d6ddcc8219cdc95426}} 
+\index{tablecipher@{tablecipher}!getValidOpenText@{getValidOpenText}}
+\index{getValidOpenText@{getValidOpenText}!tablecipher@{tablecipher}}
+\doxysubsubsection{\texorpdfstring{getValidOpenText()}{getValidOpenText()}}
+{\footnotesize\ttfamily std\+::string tablecipher\+::get\+Valid\+Open\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Валидация зашифрованного текста 
+
+Убирает пробелы из текста
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ws} & Входная строка, представляющая текст. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em cipher\+\_\+error} & если строка пуста \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classtablecipher_a19c3ebf451ec2dce5bc070724c41b956}\label{classtablecipher_a19c3ebf451ec2dce5bc070724c41b956}} 
+\index{tablecipher@{tablecipher}!isPlusKey@{isPlusKey}}
+\index{isPlusKey@{isPlusKey}!tablecipher@{tablecipher}}
+\doxysubsubsection{\texorpdfstring{isPlusKey()}{isPlusKey()}}
+{\footnotesize\ttfamily bool tablecipher\+::is\+Plus\+Key (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Проверка символов строки 
+
+Проверяет, есть ли в сообщении символы, отличные от букв английского алфавита
+
+
+\begin{DoxyParams}{Аргументы}
+{\em s} & Входная строка, представляющая текст. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em cipher\+\_\+error,если} & присутствуют некорректные символы \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classtablecipher_a1832a22e85a5302a5eef4ddc1ec6bc28}\label{classtablecipher_a1832a22e85a5302a5eef4ddc1ec6bc28}} 
+\index{tablecipher@{tablecipher}!isValidKey@{isValidKey}}
+\index{isValidKey@{isValidKey}!tablecipher@{tablecipher}}
+\doxysubsubsection{\texorpdfstring{isValidKey()}{isValidKey()}}
+{\footnotesize\ttfamily int tablecipher\+::is\+Valid\+Key (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Проверка валидации ключа 
+
+Проверяет, что ключ не более половины длины шифруемого сообщения.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em s} & Входная строка, представляющая ключ, строка с текстом. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+ключ, который равен половины длины строки. 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+tablecipher.\+h\item 
+tablecipher.\+cpp\end{DoxyCompactItemize}
